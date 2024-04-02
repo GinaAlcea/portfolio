@@ -12,7 +12,7 @@ const Contact = () => {
           <h1>
             <AnimatedLetters strArray={contactArray} index={1} />
           </h1>
-          <h2>creative / enthusiastic / adaptive</h2>
+          <h2>anything else?</h2>
           <form noValidate>
             <Stack className="contact-form" direction={'column'}>
               <Stack className="contact-form-info" direction={'row'}>
@@ -20,7 +20,6 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  className="... :invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
                   placeholder="E-mail"
                   required
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
