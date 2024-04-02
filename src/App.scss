@@ -10,4 +10,54 @@ input, textarea {
   height: 100vh;
 }
 
+  h1 {
+    color: #fff;
+    font-size: 53px;
+    margin: 0;
+
+    &::before {
+      content: '" ';
+      font-family: cursive;
+      color: black;
+      font-size: 53px;
+      animation: fadeIn 1.5s 1s backwards;
+    }
+
+    &::after {
+      content: ' "';
+      font-family: cursive;
+      color: black;
+      font-size: 53px;
+      animation: fadeIn 1.5s 1s backwards;
+    }
+  }
+
+  h2 {
+    color: #8d8d8d;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    animation: fadeIn 1.5s 1s backwards;
+  }
+
+
+.button {
+  display: flex;
+  color:#ffffff;
+  background: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid #CCC;
+  opacity: 0.8;
+  margin-top: 25px;
+
+  &:hover {
+    background: #8d8d8d;
+    color: #333;
+  }
+}
+
 $primary-color: #2b2b2b;

@@ -35,7 +35,7 @@
       position: relative;
       text-decoration: none;
 
-      &:hover {
+        &:hover {
         color: #fff;
 
         svg {
@@ -61,11 +61,11 @@
       }
     }
 
-      a.home {
-        &:after {
-          content: 'HOME';
-        }
+    a.home {
+      &:after {
+        content: 'HOME';
       }
+    }
 
     a.about {
       &:after {
@@ -73,9 +73,16 @@
       }
     }
 
+    a.work {
+      &:after {
+        content: 'WORK';
+      }
+    }
+
     a.contact {
       &:after {
         content: 'CONTACT';
+        letter-spacing: 1px;
       }
     }
 

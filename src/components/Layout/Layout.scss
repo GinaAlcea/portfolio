@@ -4,12 +4,7 @@
 }
 
 .container {
-  width: 100%;
+  width: auto;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
 }

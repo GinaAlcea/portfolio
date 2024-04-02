@@ -1,16 +1,19 @@
 import './AnimatedLetters.scss'
 
 interface Props {
-  letterClass: string
   strArray: Array<string>
   index: number
 }
 
-const AnimatedLetters = ({ letterClass, strArray, index }: Props) => {
+const AnimatedLetters = ({ strArray, index }: Props) => {
   return (
     <span>
       {strArray.map((char: string, i: number) => (
-        <span key={char + i} className={`${letterClass} _${i + index}`}>
+        <span
+          key={char + i}
+          className={`text-animate
+        _${i + index}`}
+        >
           {char}
         </span>
       ))}
