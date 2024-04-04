@@ -73,6 +73,12 @@
       }
     }
 
+    a.skills {
+      &:after {
+        content: 'SKILLS';
+      }
+    }
+
     a.work {
       &:after {
         content: 'WORK';

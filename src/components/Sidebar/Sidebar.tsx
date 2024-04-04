@@ -6,6 +6,7 @@ import {
   faHome,
   faUser,
   faCode,
+  faLightbulb,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Stack } from '@mui/material'
@@ -22,6 +23,9 @@ const Sidebar = () => {
         </NavLink>
         <NavLink className="about" to="/about">
           <FontAwesomeIcon icon={faUser} />
+        </NavLink>
+        <NavLink className="skills" to="/skills">
+          <FontAwesomeIcon icon={faLightbulb} />
         </NavLink>
         <NavLink className="work" to="/work">
           <FontAwesomeIcon icon={faCode} />

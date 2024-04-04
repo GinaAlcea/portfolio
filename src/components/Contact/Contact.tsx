@@ -1,9 +1,31 @@
 import { Stack } from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './Contact.scss'
+import { useEffect, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const contactArray = 'Contact me'.split('')
+  // const refForm = useRef()
+
+  // const sendEmail = (e: any) => {
+  //   console.log(e)
+  //   e.preventDefault()
+
+  //   emailjs
+  //     .sendForm('service_hyyudiu', 'contact_form', refForm.current, {
+  //       publicKey: '1Fn86Hq0gZrsc0rtA',
+  //     })
+  //     .then(
+  //       () => {
+  //         alert('Message has been successfully sent!')
+  //         window.location.reload()
+  //       },
+  //       (error) => {
+  //         alert('Message has not been sent. Please try again')
+  //       }
+  //     )
+  // }
 
   return (
     <>
@@ -13,7 +35,9 @@ const Contact = () => {
             <AnimatedLetters strArray={contactArray} index={1} />
           </h1>
           <h2>anything else?</h2>
-          <form noValidate>
+          <form noValidate
+          // ref={refForm} onSubmit={sendEmail}
+          >
             <Stack className="contact-form" direction={'column'}>
               <Stack className="contact-form-info" direction={'row'}>
                 <input type="text" name="name" placeholder="Name" required />

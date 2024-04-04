@@ -1,0 +1,18 @@
+.work-page {
+  position: relative;
+  top: 10rem;
+  left: 10rem;
+  width: 100%;
+
+  .text-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    width: 50%;
+  }
+
+  h1 {
+    margin-left: -3.5rem
+  }
+}

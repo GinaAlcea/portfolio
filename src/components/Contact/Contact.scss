@@ -1,9 +1,10 @@
 .contact-page {
-  margin: 10rem;
+  position: relative;
+  top: 10rem;
+  left: 10rem;
   width: 100%;
 
   .text-zone {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -17,6 +18,7 @@
 
   form {
     width: 80%;
+    animation: fadeIn 1.5s 1s backwards;
 
     .contact-form {
       width: 100%;

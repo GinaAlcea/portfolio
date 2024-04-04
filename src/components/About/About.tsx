@@ -1,57 +1,47 @@
 import { Stack } from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './About.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faReact,
-  faJs,
-  faGithub,
-  faNpm,
-  faHtml5,
-  faCss3,
-} from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
   const aboutArray = 'About me'.split('')
 
   return (
     <div className="container about-page">
-      <Stack direction={'row'} sx={{ width: '100%' }}>
+      <Stack direction={'row'}>
         <div className="text-zone">
           <h1>
             <AnimatedLetters strArray={aboutArray} index={1} />
           </h1>
           <h2>creative / enthusiastic / adaptive</h2>
           <p>
-            I am going to describe a little bit about me; what do i like and
-            what am i like
+            I would describe myself as someone who tries to find balance in
+            everything she does. I like to create pretty things that look nice -
+            but they need to serve a purpose too. I like to go out and explore
+            the world - but I also find so much peace in the places and people I
+            know. For me, as long as everything is in balance I feel perfectly
+            in place.
           </p>
           <p>
-            then i'll explain a little bit about how i got into IT and what i
-            like about it and what i'm good at
+            However, that doesn't mean that I'm afraid to change things up! In
+            2022 I decided to change careers and went from assistent-manager in
+            an Irish pub to an IT trainee, and I've loved every moment of it so
+            far. My colleagues would add that I bring a breath of fresh air as I
+            try to balance work with fun, while maintaining a positive but
+            realistic view. I take their opinions to heart while trying to
+            create the best result possible.
+            {/*
+            I
+            like learning new things, meeting new people and trying things I
+            haven't tried before. I'm very eager to explore new subjects to form
+            new opinions by myself, but I also appreciate people who share their
+            experiences and show me their view on these subjects.
           </p>
-        </div>
-        <div className="cube-container">
-          <div className="skills-cube">
-            <div className="side1">
-              <FontAwesomeIcon icon={faReact} />
-            </div>
-            <div className="side2">
-              <FontAwesomeIcon icon={faHtml5} />
-            </div>
-            <div className="side3">
-              <FontAwesomeIcon icon={faCss3} />
-            </div>
-            <div className="side4">
-              <FontAwesomeIcon icon={faJs} />
-            </div>
-            <div className="side5">
-              <FontAwesomeIcon icon={faGithub} />
-            </div>
-            <div className="side6">
-              <FontAwesomeIcon icon={faNpm} />
-            </div>
-          </div>
+          <p>
+            A good example of how much I like to learn new things: in 2022 in
+            decided to change careers and went from assistent-manager in an
+            Irish pub to an IT trainee, and I've loved every moment of it so
+            far! */}
+          </p>
         </div>
       </Stack>
     </div>

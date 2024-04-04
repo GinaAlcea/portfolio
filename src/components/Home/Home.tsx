@@ -1,6 +1,8 @@
 import './Home.scss'
 import DownloadIcon from '@mui/icons-material/Download'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
+import GinaIsaiaCV from '../../asset/GinaIsaiaCV.pdf'
+import HomepageBackground from '../Backgrounds/HomepageBackground'
 
 const Home = () => {
   const nameArray = 'Gina Isaia'.split('')
@@ -15,12 +17,13 @@ const Home = () => {
         <h2>frontend developer / ux/ui designer / personality hire</h2>
         <a
           className="button"
-          href="../../assets/GinaIsaia_CV"
-          download
+          href={GinaIsaiaCV}
+          download="GinaIsaia-CV"
           title="Download CV"
         >
           DOWNLOAD CV <DownloadIcon />
         </a>
+        <HomepageBackground />
       </div>
     </div>
   )
