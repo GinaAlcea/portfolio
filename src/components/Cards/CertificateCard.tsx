@@ -7,10 +7,9 @@ import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-const CerticicateCard = () => {
+const CertificateCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-
       <FontAwesomeIcon icon={faAward} size="2xl" />
 
       <CardContent>
@@ -29,4 +28,4 @@ const CerticicateCard = () => {
     </Card>
   )
 }
-export default CerticicateCard
+export default CertificateCard

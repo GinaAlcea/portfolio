@@ -10,7 +10,7 @@ import {
   faCss3,
 } from '@fortawesome/free-brands-svg-icons'
 import { Stack } from '@mui/material'
-import CerticicateCard from '../Cards/CertificateCard'
+import CertificateCard from '../Cards/CertificateCard'
 
 const Skills = () => {
   const skillsArray = 'My skills'.split('')
@@ -43,9 +43,9 @@ const Skills = () => {
             ReactJS, JavaScript, HTML5, (S)CSS, NPM, GitHub and libraries like
             Mui and Mantine.
           </p>
-          <Stack direction={'row'}>
-            <CerticicateCard />
-          </Stack>
+          {/* <Stack direction={'row'}>
+            <CertificateCard />
+          </Stack> */}
         </div>
         <div className="cube-container">
           <div className="skills-cube">
