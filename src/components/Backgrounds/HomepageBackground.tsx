@@ -20,8 +20,17 @@ const HomepageBackground = () => {
           id="tsparticles"
           options={{
             autoPlay: true,
-            fpsLimit: 120,
+            // background: {
+            //   image:
+            //     'radial-gradient(ellipse at center, black 0%, #444 100%)',
+            // },
+            fullScreen: {
+              enable: true,
+            },
+            detectRetina: true,
+            fpsLimit: 90,
             interactivity: {
+              detectsOn: 'canvas',
               events: {
                 onClick: {
                   enable: true,
@@ -30,107 +39,122 @@ const HomepageBackground = () => {
                 onHover: {
                   enable: true,
                   mode: 'repulse',
-                },
-                resize: {
-                  delay: 0.5,
-                  enable: true,
+                  parallax: {
+                    enable: false,
+                    force: 10,
+                    smooth: 5,
+                  },
                 },
               },
               modes: {
+                attract: {
+                  distance: 50,
+                  duration: 0.4,
+                  speed: 1,
+                },
+                bounce: {
+                  distance: 40,
+                },
+                bubble: {
+                  distance: 50,
+                  duration: 2,
+                  opacity: 0.8,
+                  size: 40,
+                },
                 push: {
                   quantity: 4,
                 },
+                remove: {
+                  quantity: 2,
+                },
                 repulse: {
-                  distance: 50,
+                  distance: 100,
                   duration: 0.4,
+                  speed: 1,
+                },
+                slow: {
+                  factor: 3,
+                  radius: 200,
                 },
               },
             },
             particles: {
               color: {
-                value: '#ffffff',
-                animation: {
-                  h: {
-                    count: 0,
-                    enable: false,
-                    speed: 1,
-                    decay: 0,
-                    delay: 0,
-                    sync: true,
-                    offset: 0,
-                  },
-                  s: {
-                    count: 0,
-                    enable: false,
-                    speed: 1,
-                    decay: 0,
-                    delay: 0,
-                    sync: true,
-                    offset: 0,
-                  },
-                  l: {
-                    count: 0,
-                    enable: false,
-                    speed: 1,
-                    decay: 0,
-                    delay: 0,
-                    sync: true,
-                    offset: 0,
+                value: '#efeeee',
+              },
+              move: {
+                angle: {
+                  offset: 45,
+                  value: 90,
+                },
+                attract: {
+                  enable: false,
+                  rotate: {
+                    x: 600,
+                    y: 1200,
                   },
                 },
-              },
-              links: {
-                color: '#ffffff',
-                distance: 150,
                 enable: true,
-                opacity: 0.5,
-                width: 1,
+                gravity: {
+                  acceleration: 9.81,
+                  enable: false,
+                  maxSpeed: 50,
+                },
+                speed: 0.05,
               },
               number: {
                 density: {
-                  enable: false,
-                  width: 1920,
-                  height: 1080,
+                  enable: true,
                 },
-                value: 80,
+                value: 200,
               },
               opacity: {
                 value: {
                   min: 0.1,
-                  max: 1,
+                  max: 0.5,
+                },
+                animation: {
+                  count: 0,
+                  enable: true,
+                  speed: 0.1,
+                  sync: false,
+                  destroy: 'none',
+                  startValue: 'random',
                 },
               },
+              reduceDuplicates: false,
+
               shape: {
-                close: true,
-                fill: true,
                 options: {},
-                type: 'diamond',
+                type: 'circle',
               },
               size: {
-                value: 7,
+                value: {
+                  min: 0.1,
+                  max: 5,
+                },
                 animation: {
+                  count: 0,
                   enable: true,
-                  speed: 12,
+                  speed: 5,
                   sync: false,
-                  mode: 'auto',
-                  startValue: 'random',
                   destroy: 'none',
+                  startValue: 'random',
                 },
               },
               twinkle: {
-                lines: {
-                  enable: false,
-                  frequency: 15,
-                  opacity: 1,
-                },
                 particles: {
-                  enable: true,
-                  frequency: 8,
+                  enable: false,
+                  frequency: 5,
                   opacity: 1,
+                  color: {
+                    value: '#ffff00',
+                  },
                 },
               },
             },
-            detectRetina: true,
+            pauseOnBlur: true,
+            pauseOnOutsideViewport: true,
           }}
         />
       )}
