@@ -106,7 +106,7 @@ const HomepageBackground = () => {
                 density: {
                   enable: true,
                 },
-                value: 200,
+                value: 300,
               },
               opacity: {
                 value: {
@@ -123,7 +123,6 @@ const HomepageBackground = () => {
                 },
               },
               reduceDuplicates: false,
-
               shape: {
                 options: {},
                 type: 'circle',
@@ -131,7 +130,7 @@ const HomepageBackground = () => {
               size: {
                 value: {
                   min: 0.1,
-                  max: 5,
+                  max: 2,
                 },
                 animation: {
                   count: 0,

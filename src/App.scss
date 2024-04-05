@@ -58,10 +58,12 @@ input, textarea {
   border: 1px solid #CCC;
   opacity: 0.8;
   margin-top: 25px;
+  background: #181818;
 
   &:hover {
     background: #8d8d8d;
     color: #333;
+    transition: ease-out 0.2s;
   }
 }
 
