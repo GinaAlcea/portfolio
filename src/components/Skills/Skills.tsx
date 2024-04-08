@@ -1,16 +1,7 @@
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import './Skills.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faReact,
-  faJs,
-  faGithub,
-  faNpm,
-  faHtml5,
-  faCss3,
-} from '@fortawesome/free-brands-svg-icons'
 import { Stack } from '@mui/material'
-import SkillCard from '../Cards/SkillCard'
+import SkillCard from './SkillGrid'
+import './Skills.scss'
 
 const Skills = () => {
   const skillsArray = 'My skills'.split('')
@@ -34,7 +25,9 @@ const Skills = () => {
             I've also learned about how an application is created: from
             interview to design, from programming to testing and from
             implementation to managing it. In this time I've earned certificates
-            for some fundamental subjects in the IT field.
+            for some fundamental subjects in the IT field: MySQL Fundamentals,
+            Professional Scrum Master I, Professional Scrum Master II and Azure
+            Fundamentals 900.
           </p>
           <p>
             While working in the field for almost 2 years I've experienced what
@@ -44,30 +37,7 @@ const Skills = () => {
             Mui and Mantine.
           </p>
         </div>
-          {/* <CertificateCard /> */}
-          <SkillCard />
-        {/* <div className="cube-container">
-          <div className="skills-cube">
-            <div className="side1">
-              <FontAwesomeIcon icon={faReact} />
-            </div>
-            <div className="side2">
-              <FontAwesomeIcon icon={faHtml5} />
-            </div>
-            <div className="side3">
-              <FontAwesomeIcon icon={faCss3} />
-            </div>
-            <div className="side4">
-              <FontAwesomeIcon icon={faJs} />
-            </div>
-            <div className="side5">
-              <FontAwesomeIcon icon={faGithub} />
-            </div>
-            <div className="side6">
-              <FontAwesomeIcon icon={faNpm} />
-            </div>
-          </div>
-        </div> */}
+        <SkillCard />
       </Stack>
     </div>
   )
