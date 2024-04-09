@@ -55,7 +55,7 @@ input, textarea {
   letter-spacing: 2px;
   text-decoration: none;
   padding: 10px 18px;
-  border: 1px solid #CCC;
+  border: 1px solid  rgb(174, 174, 174);
   opacity: 0.8;
   margin-top: 25px;
   background: #181818;
@@ -64,6 +64,7 @@ input, textarea {
     background: #8d8d8d;
     color: #333;
     transition: ease-out 0.2s;
+    box-shadow: 0 0 30px rgb(174, 174, 174);
   }
 }
 

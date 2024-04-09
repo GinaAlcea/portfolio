@@ -47,17 +47,18 @@
     background:#202020;
     animation: eclipse 120s infinite linear;
     transform-origin: 50% 150%;
+    box-shadow: inset 0 0 50px rgba(69, 68, 68, 0.2);
   }
 
   @keyframes eclipse {
     0% {
-      transform: rotate(-50deg);
+      transform: rotate(-60deg);
     }
     90% {
-      transform: rotate(80deg);
+      transform: rotate(70deg);
     }
     100%{
-      transform: rotate(310deg);
+      transform: rotate(300deg);
     }
   }
 }

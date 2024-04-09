@@ -7,7 +7,7 @@ const HomepageBackground = () => {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadFull(engine)
+     loadFull(engine)
     }).then(() => {
       setInit(true)
     })
@@ -20,10 +20,6 @@ const HomepageBackground = () => {
           id="tsparticles"
           options={{
             autoPlay: true,
-            // background: {
-            //   image:
-            //     'radial-gradient(ellipse at center, black 0%, #444 100%)',
-            // },
             fullScreen: {
               enable: true,
             },
