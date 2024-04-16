@@ -3,7 +3,7 @@ import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import { PROJECTS } from './Projects/Projects'
 import './Work.scss'
 
-const Work = () => {
+export const Work = () => {
   const workArray = 'My work'.split('')
   let navigate = useNavigate()
 
@@ -28,7 +28,7 @@ const Work = () => {
           <h1>{value.title}</h1>
           <h2>{value.subtitle}</h2>
         </div>
-        <img src={value.image} />
+        <img className="project-img" src={value.image}/>
       </div>
     )
   })

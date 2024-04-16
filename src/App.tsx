@@ -20,9 +20,10 @@ function App() {
           <Route path="skills" element={<Skills />} />
           <Route path="work" element={<Work />}>
             <Route path="work/egeria" element={<Egeria />} />
-            <Route path="work/igraph" element={<Igraph />} />
             <Route path="work/mobiliteit" element={<RoutesnaarM />} />
           </Route>
+           <Route path="igraph" element={<Igraph />} />
+
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

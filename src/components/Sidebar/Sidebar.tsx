@@ -7,7 +7,9 @@ import {
   faUser,
   faCode,
   faLightbulb,
+  faAward
 } from '@fortawesome/free-solid-svg-icons'
+import Logo from '../../asset/Logo.svg'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Stack } from '@mui/material'
 
@@ -15,7 +17,7 @@ const Sidebar = () => {
   return (
     <Stack className="nav-bar">
       <Link className="logo" to="/">
-        <img src={''} alt="logo" />
+        <img src={Logo} alt="logo" />
       </Link>
       <Stack className="nav-bar-pages">
         <NavLink className="home" to="/">
@@ -32,6 +34,9 @@ const Sidebar = () => {
         </NavLink>
         <NavLink className="contact" to="/contact">
           <FontAwesomeIcon icon={faEnvelope} />
+        </NavLink>
+        <NavLink className="igraph" to="/igraph">
+          <FontAwesomeIcon icon={faAward} />
         </NavLink>
       </Stack>
       <Stack>

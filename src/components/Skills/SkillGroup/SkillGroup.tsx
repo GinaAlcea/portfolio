@@ -6,7 +6,6 @@ interface Props {
 }
 
 const SkillGroup = ({ value }: Props) => {
-  console.log(value.icon)
   const logo =
     typeof value.icon === 'object' ? (
       <FontAwesomeIcon
