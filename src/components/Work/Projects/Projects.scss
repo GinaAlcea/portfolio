@@ -1,0 +1,50 @@
+.project-page {
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  left: 10rem;
+  max-width: calc(100% - 10rem);
+
+  .text-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 50%;
+  }
+
+  h1 {
+    margin-left: -3.5rem
+  }
+
+  .project-zone {
+    overflow-y: scroll;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-right: 10rem;
+
+
+    .project-video {
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    .project-img {
+      position: relative;
+
+      .project-new-img {
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      .project-old-img {
+        position: absolute;
+        inset: 100%;
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+}

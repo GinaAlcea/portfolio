@@ -9,6 +9,7 @@ import Skills from './components/Skills/Skills'
 import Egeria from './components/Work/Projects/Egeria'
 import Igraph from './components/Work/Projects/Igraph'
 import RoutesnaarM from './components/Work/Projects/RoutesnaarM'
+import { PROJECTS } from './components/Work/Projects/Projects'
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="skills" element={<Skills />} />
-          <Route path="work" element={<Work />}>
-            <Route path="work/egeria" element={<Egeria />} />
-            <Route path="work/mobiliteit" element={<RoutesnaarM />} />
-          </Route>
-           <Route path="igraph" element={<Igraph />} />
+          <Route path="work" element={<Work projects={PROJECTS}/>} />
+
+            {/* <Route path="igraph" element={<Igraph />} />
+            <Route path="egeria" element={<Egeria />} />
+            <Route path="mobiliteit" element={<RoutesnaarM />} /> */}
+            <Route path="work/:project" element={<Igraph />} />
 
           <Route path="contact" element={<Contact />} />
         </Route>

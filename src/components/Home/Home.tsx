@@ -2,7 +2,7 @@ import './Home.scss'
 import DownloadIcon from '@mui/icons-material/Download'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import GinaIsaiaCV from '../../asset/GinaIsaiaCV.pdf'
-import HomepageBackground from '../Backgrounds/HomepageBackground'
+import HomepageBackground from './HomepageBackground'
 
 const Home = () => {
   const nameArray = 'Gina Isaia'.split('')

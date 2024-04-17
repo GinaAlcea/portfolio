@@ -1,35 +1,48 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useParams, Routes, Route, Outlet } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import { PROJECTS } from './Projects/Projects'
+// import { PROJECTS } from './Projects/Projects'
 import './Work.scss'
 
-export const Work = () => {
+interface Projects {
+  [index: number]: Project[]
+}
+
+interface Project {
+  title: string
+  image: string
+  subtitle: string
+  link?: string
+  gh?: string
+  description: string
+  size: string
+}
+
+export const Work = ({ projects }: { projects: Projects }) => {
+  console.log('projects', projects)
   const workArray = 'My work'.split('')
-  let navigate = useNavigate()
 
   const delay = 100
   const duration = 1500
   const listAnimation = (i: number) =>
     `fadeIn ${duration}ms ${delay * i}ms backwards`
 
-  const renderProjectsGrid = Object.entries(PROJECTS).map(([key, value], i) => {
-    const handleProjectClick = () => {
-      navigate(`/work/${key}`)
-    }
-
+  const renderProjectsGrid = Object.entries(projects).map(([key, value], i) => {
     return (
-      <div
-        className={`project ${value.size}`}
-        key={i}
-        style={{ animation: listAnimation(i) }}
-        onClick={handleProjectClick}
-      >
-        <div className="hover-name">
-          <h1>{value.title}</h1>
-          <h2>{value.subtitle}</h2>
+      <Link className={`project ${value.size}`} to={`${key}`} key={key}>
+        <div
+          style={{
+            animation: listAnimation(i),
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <div className="hover-name">
+            <h1>{value.title}</h1>
+            <h2>{value.subtitle}</h2>
+          </div>
+          <img className="project-img" src={value.image} />
         </div>
-        <img className="project-img" src={value.image}/>
-      </div>
+      </Link>
     )
   })
 
@@ -43,6 +56,7 @@ export const Work = () => {
           <h2> A quick look into the work I've done</h2>
         </div>
         <div className="work-grid">{renderProjectsGrid}</div>
+        <Outlet />
       </div>
     </>
   )
