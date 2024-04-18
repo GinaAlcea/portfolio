@@ -18,7 +18,6 @@ interface Project {
 }
 
 export const Work = ({ projects }: { projects: Projects }) => {
-  console.log('projects', projects)
   const workArray = 'My work'.split('')
 
   const delay = 100

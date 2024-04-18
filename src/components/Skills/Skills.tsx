@@ -1,7 +1,19 @@
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import SkillGroup from './SkillGroup/SkillGroup'
 import { SKILLS } from './SkillList'
 import './Skills.scss'
+
+interface Skills {
+  [index: number]: Skill[]
+}
+
+interface Skill {
+  name: string
+  icon: string | IconDefinition
+  type: string
+  experience: string
+}
 
 const Skills = () => {
   const skillsArray = 'My skills'.split('')

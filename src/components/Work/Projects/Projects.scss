@@ -25,7 +25,6 @@
     width: 80%;
     padding-right: 10rem;
 
-
     .project-video {
       width: 100%;
       margin: 1rem 0;
@@ -41,9 +40,10 @@
 
       .project-old-img {
         position: absolute;
-        inset: 100%;
+        // inset: 100%;
         width: 100%;
         margin: 1rem 0;
+        left: 0;
       }
     }
   }

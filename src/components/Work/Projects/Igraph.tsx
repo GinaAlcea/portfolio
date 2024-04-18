@@ -13,6 +13,7 @@ import oldStats from '../../../asset/igraph-images/old-stats.png'
 import oldStats2 from '../../../asset/igraph-images/old-stats2.png'
 import mediumold from '../../../asset/igraph-images/mediumold.png'
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 
 const NEW_IMAGES = {
   graph: { src: graph },
@@ -24,28 +25,30 @@ const NEW_IMAGES = {
 
 const OLD_IMAGES = {
   oldGraph: { src: oldGraph },
-  // oldHome: { src: mediumold },
   oldStats2: { src: oldStats2 },
   oldStats: { src: oldStats },
   oldMenu: { src: oldMenu },
+  oldHome: { src: mediumold },
 }
 
 const Igraph = () => {
   const { project } = useParams()
   const projectArray = 'iGraph'.split('')
+  const [imageReveal, setImageReveal] = useState(50)
 
-  // const imagePath = '../../../asset/igraph-images/'
   const oldImgs = Object.values(OLD_IMAGES).map((img) => img.src)
 
   const renderNewImages = Object.values(NEW_IMAGES).map((img, i) => {
     return (
       <div className="project-img" key={i}>
-        <div>
-          <img className="project-new-img" src={img.src} />
-        </div>
-        <div>
-          <img className="project-old-img" src={oldImgs[i]} />
-        </div>
+        <img className="project-old-img" src={oldImgs[i]} />
+        <img
+          className="project-new-img"
+          src={img.src}
+          style={{
+            clipPath: `polygon(0 0, ${imageReveal}% 0, ${imageReveal}% 100%, 0 100%)`,
+          }}
+        />
       </div>
     )
   })

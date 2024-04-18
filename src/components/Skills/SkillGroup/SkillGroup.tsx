@@ -1,11 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './SkillGroup.scss'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
-interface Props {
-  value: any
+interface Skills {
+  [index: number]: Skill[]
 }
 
-const SkillGroup = ({ value }: Props) => {
+interface Skill {
+  name: string
+  icon: string | IconDefinition
+  type: string
+  experience: string
+}
+
+const SkillGroup = ({ value }: { value: Skill}) => {
   const logo =
     typeof value.icon === 'object' ? (
       <FontAwesomeIcon
