@@ -20,15 +20,6 @@ export const PROJECTS = {
     gh: 'https://github.com/odpi/egeria',
     description:
       'Egeria is an open source project dedicated to enabling teams to collaborate by making metadata open and automatically exchanged between tools and platforms, no matter which vendor they come from',
-    size: 'large',
-  },
-  mobiliteit: {
-    title: 'Routes naar Mobiliteit',
-    image: '',
-    subtitle: 'UI/UX Design / Axure',
-    link: '',
-    gh: '',
-    description: '',
-    size: 'small',
+    size: 'medium',
   },
 }

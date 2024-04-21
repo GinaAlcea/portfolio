@@ -35,9 +35,6 @@ const Sidebar = () => {
         <NavLink className="contact" to="/contact">
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
-        <NavLink className="igraph" to="/igraph">
-          <FontAwesomeIcon icon={faAward} />
-        </NavLink>
       </Stack>
       <Stack>
         <a
