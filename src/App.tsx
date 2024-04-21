@@ -20,9 +20,9 @@ function App() {
           <Route path="skills" element={<Skills />} />
           <Route path="work" element={<Work projects={PROJECTS} />} />
 
-          {/* <Route path="igraph" element={<Igraph />} /> */}
-          <Route path="work/:egeria" element={<Egeria />} />
-          <Route path="work/:igraph" element={<Igraph />} />
+          {/* <Route path="igraph" element={<Igraph />} />
+            <Route path="egeria" element={<Egeria />} /> */}
+          <Route path="work/:project" element={<Igraph />} />
 
           <Route path="contact" element={<Contact />} />
         </Route>

@@ -7,7 +7,6 @@ import {
   faUser,
   faCode,
   faLightbulb,
-  faAward
 } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../../asset/Logo.svg'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'

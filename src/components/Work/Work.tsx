@@ -1,4 +1,4 @@
-import { Link, useParams, Routes, Route, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 // import { PROJECTS } from './Projects/Projects'
 import './Work.scss'

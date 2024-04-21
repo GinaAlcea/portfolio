@@ -4,7 +4,7 @@ import SkillGroup from './SkillGroup/SkillGroup'
 import { SKILLS } from './SkillList'
 import './Skills.scss'
 
-interface Skills {
+interface ISkills {
   [index: number]: Skill[]
 }
 

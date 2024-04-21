@@ -12,25 +12,24 @@ import oldMenu from '../../../asset/igraph-images/old-graph.png'
 import oldStats from '../../../asset/igraph-images/old-stats.png'
 import emptyCharts from '../../../asset/igraph-images/empty-charts.png'
 import oldEmptyCharts from '../../../asset/igraph-images/old-empty-charts.png'
-import { useParams } from 'react-router-dom'
 import { useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 const NEW_IMAGES = {
-  graph: { src: graph },
-  home: { src: homepageMenu },
-  stats: { src: stats },
-  emptyCharts: { src: emptyCharts },
-  menu: { src: menu },
+  graph: { src: graph, alt: 'new-ui-graph' },
+  home: { src: homepageMenu, alt: 'new-ui-home' },
+  stats: { src: stats, alt: 'new-ui-stats' },
+  emptyCharts: { src: emptyCharts, alt: 'new-ui-placeholders' },
+  menu: { src: menu, alt: 'new-ui-menu' },
 }
 
 const OLD_IMAGES = {
-  oldGraph: { src: oldGraph },
-  oldHome: { src: oldGraph },
-  oldStats: { src: oldStats },
-  oldEmptyCharts: { src: oldEmptyCharts },
-  oldMenu: { src: oldMenu },
+  oldGraph: { src: oldGraph, alt: 'old-ui-graph' },
+  oldHome: { src: oldGraph, alt: 'old-ui-home' },
+  oldStats: { src: oldStats, alt: 'old-ui-stats' },
+  oldEmptyCharts: { src: oldEmptyCharts, alt: 'old-ui-placeholders' },
+  oldMenu: { src: oldMenu, alt: 'old-ui-menu' },
 }
 
 const Igraph = () => {
@@ -71,15 +70,20 @@ const Igraph = () => {
     window.onmousemove = null
     window.onmouseup = null
   }
-  const oldImgs = Object.values(OLD_IMAGES).map((img) => img.src)
+  const oldImgs = Object.values(OLD_IMAGES).map((img) => img)
 
   const renderNewImages = Object.values(NEW_IMAGES).map((img, i) => {
     return (
       <div className="project-img noselect" ref={imageContainer} key={i}>
-        <img className="project-old-img" src={oldImgs[i]} />
+        <img
+          className="project-old-img"
+          src={oldImgs[i].src}
+          alt={oldImgs[i].alt}
+        />
         <img
           className="project-new-img"
           src={img.src}
+          alt={img.alt}
           style={{
             clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100}% 100%, 0 100%)`,
           }}

@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './About.scss'
 

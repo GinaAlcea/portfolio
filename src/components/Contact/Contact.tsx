@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './Contact.scss'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
