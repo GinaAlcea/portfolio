@@ -40,8 +40,10 @@ const About = () => {
             far! */}
         </p>
       </div>
-      <div className="sun">
-        <div className="moon"></div>
+      <div style={{ overflow: 'hidden' }}>
+        <div className="sun">
+          <div className="moon"></div>
+        </div>
       </div>
     </div>
   )

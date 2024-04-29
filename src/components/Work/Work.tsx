@@ -26,13 +26,13 @@ export const Work = ({ projects }: { projects: Projects }) => {
     `fadeIn ${duration}ms ${delay * i}ms backwards`
 
   const renderProjectsGrid = Object.entries(projects).map(([key, value], i) => {
+    console.log(key)
     return (
       <Link className={`project ${value.size}`} to={`${key}`} key={key}>
         <div
+          className="project-group"
           style={{
             animation: listAnimation(i),
-            display: 'flex',
-            justifyContent: 'center',
           }}
         >
           <div className="hover-name">
@@ -52,7 +52,7 @@ export const Work = ({ projects }: { projects: Projects }) => {
           <h1>
             <AnimatedLetters strArray={workArray} index={1} />
           </h1>
-          <h2> A quick look into the work I've done</h2>
+          <h2> A look into the work I've done</h2>
         </div>
         <div className="work-grid">{renderProjectsGrid}</div>
         <Outlet />

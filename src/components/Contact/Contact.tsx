@@ -34,8 +34,8 @@ const Contact = () => {
           <h1>
             <AnimatedLetters strArray={contactArray} index={1} />
           </h1>
-          <h2>anything else?</h2>
-          <form noValidate
+          <h2>questions / offers </h2>
+          <form
           // ref={refForm} onSubmit={sendEmail}
           >
             <Stack className="contact-form" direction={'column'}>

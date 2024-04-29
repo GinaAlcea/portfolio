@@ -33,7 +33,7 @@ const Skills = () => {
         key={i}
         style={{
           animation: listAnimation(i),
-          transform: `rotate(${angleIncrements}deg) translate(600px) rotate(-${angleIncrements}deg)`,
+          transform: `rotate(${angleIncrements}deg) translate(500px, 50px) rotate(-${angleIncrements}deg)`,
         }}
       >
         <SkillGroup value={skill} />
@@ -73,11 +73,6 @@ const Skills = () => {
           JavaScript, HTML5, (S)CSS, NPM, GitHub and libraries like Mui and
           Mantine.
         </p>
-        {/* <p>
-          {Object.values(SKILLS).map((skill, i) => {
-            return <h2 className='xp'>{skill.experience}<br />{skill.type}</h2>
-          })}
-        </p> */}
       </div>
     </div>
   )

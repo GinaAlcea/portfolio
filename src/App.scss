@@ -8,33 +8,37 @@ input, textarea {
 .App {
   width: 100vw;
   height: 100vh;
+  overflow: auto;
+  scrollbar-color: #4d4d4e #181818;
 }
 
   h1 {
     color: #fff;
     font-size: 53px;
+    font-weight: 700;
     margin: 0;
 
-    &::before {
-      content: '" ';
-      font-family: cursive;
-      color: black;
-      font-size: 53px;
-      animation: fadeIn 1.5s 1s backwards;
-    }
+    // &::before {
+    //   content: '" ';
+    //   font-family: cursive;
+    //   color: black;
+    //   font-size: 53px;
+    //   animation: fadeIn 1.5s 1s backwards;
+    // }
 
-    &::after {
-      content: ' "';
-      font-family: cursive;
-      color: black;
-      font-size: 53px;
-      animation: fadeIn 1.5s 1s backwards;
-    }
+    // &::after {
+    //   content: ' "';
+    //   font-family: cursive;
+    //   color: black;
+    //   font-size: 53px;
+    //   animation: fadeIn 1.5s 1s backwards;
+    // }
   }
 
   h2 {
     color: #8d8d8d;
     font-size: 14px;
+    font-weight: 500;
     letter-spacing: 3px;
     margin-top: 0;
     margin-bottom: 3rem;
@@ -45,6 +49,16 @@ input, textarea {
     color: #d4d4d4;
     font-size: 14px;
     line-height: 18px;
+    margin: 0.5rem 0;
+  }
+
+  img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
 .button {

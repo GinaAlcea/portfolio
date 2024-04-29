@@ -8,12 +8,12 @@ import {
   faSass,
   faMicrosoft,
 } from '@fortawesome/free-brands-svg-icons'
-import logo3DSM from '../../asset/logo3DSM.png'
-import logoID from '../../asset/logoID.png'
-import logoPS from '../../asset/logoPS.png'
-import logoSCRUM from '../../asset/logoSCRUM.svg'
-import logoSQL from '../../asset/logoSQL.svg'
-import logoTS from '../../asset/logoTS.png'
+import logo3DSM from '../../asset/skills-images/logo3DSM.png'
+import logoID from '../../asset/skills-images/logoID.png'
+import logoPS from '../../asset/skills-images/logoPS.png'
+import logoSCRUM from '../../asset/skills-images/logoSCRUM.svg'
+import logoSQL from '../../asset/skills-images/logoSQL.svg'
+import logoTS from '../../asset/skills-images/logoTS.png'
 
 export const SKILLS = {
   ps: {

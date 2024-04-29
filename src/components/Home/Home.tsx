@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <HomepageBackground />
       <div className="container home-page">
-        <div className="text-zone">
+        <div className="text-zone noselect">
           <h2>Hi, I'm</h2>
           <h1>
             <AnimatedLetters strArray={nameArray} index={1} />

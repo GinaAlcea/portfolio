@@ -7,11 +7,7 @@
   .text-zone {
     display: flex;
     flex-direction: column;
-    max-width: calc(50% - 10rem);
-
-    h1 {
-      margin-left: -3rem
-    }
+    max-width: 50%;
 
     p {
     animation: fadeIn 1.5s backwards;
@@ -31,9 +27,10 @@
   }
 
   .sun {
-    z-index: -1;
-    width: 800px;
-    height: 800px;
+    z-index: -2;
+    margin: 3rem;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     background: #969696;
     box-shadow: 0 0 30px rgb(174, 174, 174);
@@ -41,8 +38,9 @@
   }
 
   .moon {
-    width: 800px;
-    height: 800px;
+    z-index: -1;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     background:#202020;
     animation: eclipse 120s infinite linear;
@@ -58,7 +56,7 @@
       transform: rotate(70deg);
     }
     100%{
-      transform: rotate(300deg);
+      transform: rotate(270deg);
     }
   }
 }
