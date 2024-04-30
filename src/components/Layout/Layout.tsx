@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../Sidebar/Sidebar'
+import Sidebar from '../Navigation/Sidebar'
 import './Layout.scss'
 import { Stack } from '@mui/material'
 

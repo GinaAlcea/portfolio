@@ -1,6 +1,6 @@
 import AnimatedLetters from '../../AnimatedLetters/AnimatedLetters'
 import { PROJECTS } from './Projects'
-import { ImageSlider } from './ImageSlider'
+import { ImageSlider } from '../../ImageSlider/ImageSlider'
 
 import homepageVid from '../../../asset/igraph-images/homepage-vid.mov'
 import homepageMenu from '../../../asset/igraph-images/home-menu.png'
@@ -11,11 +11,9 @@ import oldStats from '../../../asset/igraph-images/old-stats.png'
 import emptyCharts from '../../../asset/igraph-images/empty-charts.png'
 import oldEmptyCharts from '../../../asset/igraph-images/old-empty-charts.png'
 import './Projects.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { BackButton } from '../../Navigation/BackButton'
 
-const NEW_IMAGES = {
+const IGRAPH_NEW_IMAGES = {
   home: {
     src: homepageMenu,
     alt: 'new-ui-home',
@@ -38,7 +36,7 @@ const NEW_IMAGES = {
   },
 }
 
-const OLD_IMAGES = {
+const IGRAPH_OLD_IMAGES = {
   oldHome: { src: oldGraph, alt: 'old-ui-home' },
   oldGraph: { src: oldGraph, alt: 'old-ui-graph' },
   oldStats: { src: oldStats, alt: 'old-ui-stats' },
@@ -46,38 +44,47 @@ const OLD_IMAGES = {
 }
 
 const Igraph = () => {
-  // const [imageSelected, setImageSelected] = useState(0)
-  const projectArray = 'iGraph'.split('')
+  const projectArray = PROJECTS.igraph.title.split('')
 
-  const oldImgs = Object.values(OLD_IMAGES).map((img) => img)
+  const delay = 100
+  const duration = 1500
+  const listAnimation = (i: number) =>
+    `fadeIn ${duration}ms ${delay * i}ms backwards`
 
-  const renderNewImages = Object.values(NEW_IMAGES).map((img, i) => {
+  const oldImgs = Object.values(IGRAPH_OLD_IMAGES).map((img) => img)
+
+  const renderNewImages = Object.values(IGRAPH_NEW_IMAGES).map((img, i) => {
     return (
-      <>
-        <ImageSlider img={img} oldImg={oldImgs[i]} key={i} />
+      <div
+        style={{ animation: listAnimation(i), marginBottom: '2rem' }}
+        key={i}
+      >
+        <ImageSlider img={img} oldImg={oldImgs[i]} />
         <p>{` * ${img.desc}`}</p>
-      </>
+      </div>
     )
   })
-
-  console.log(renderNewImages)
 
   return (
     <>
       <div className="container project-page">
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <BackButton />
+        <div
+          style={{
+            display: 'flex',
+          }}
+        >
           <div className="text-zone">
             <h1>
               <AnimatedLetters strArray={projectArray} index={1} />
             </h1>
             <h2>{PROJECTS.igraph.subtitle}</h2>
-
             <i>
               Note: for confidentiality reasons all data represented is fake.
             </i>
-
             <p>{PROJECTS.igraph.description}</p>
             <p>{PROJECTS.igraph.work}</p>
+            <p>You can check out the difference between new and old below.</p>
           </div>
           <video
             className="project-main"
@@ -87,7 +94,7 @@ const Igraph = () => {
             loop
           />
         </div>
-        {renderNewImages}
+        <div className="project-img-group">{renderNewImages}</div>
       </div>
     </>
   )

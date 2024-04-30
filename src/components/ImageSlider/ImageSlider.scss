@@ -1,0 +1,66 @@
+
+.project-new-img {
+  width: 100%;
+}
+
+.project-old-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+}
+
+.reveal-handler {
+  position: absolute;
+  height: 100%;
+
+  .reveal-handler-relative {
+    position: relative;
+    height: 100%;
+
+    .divider {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #202020;
+      margin-left: -1px;
+      box-shadow: 0 0 1px #202020;
+    }
+
+    .handle {
+      background: #202020;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      margin-left: -1.5rem;
+      position: absolute;
+      top: calc(50% - 1.5rem);
+      box-shadow: 0 0 2px #202020;
+    }
+
+    .sonar-wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #202020;
+      border-radius: 50%;
+      animation: sonarWave 2s linear infinite;
+    }
+
+    @keyframes sonarWave {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  }
+}

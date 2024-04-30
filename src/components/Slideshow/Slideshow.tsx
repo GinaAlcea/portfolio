@@ -21,8 +21,6 @@ export const Slideshow = ({ images }: Props) => {
     } else setImageSelected(imageSelected + 1)
   }
 
-  console.log(images)
-
   return (
     <div style={{ position: 'relative', display: 'flex' }}>
       <div style={{ display: 'flex', translate: `-${imageSelected * 100}%` }}>

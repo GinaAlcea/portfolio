@@ -1,6 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-// import { PROJECTS } from './Projects/Projects'
 import './Work.scss'
 
 interface Projects {
@@ -20,13 +19,12 @@ interface Project {
 export const Work = ({ projects }: { projects: Projects }) => {
   const workArray = 'My work'.split('')
 
-  const delay = 100
+  const delay = 1000
   const duration = 1500
   const listAnimation = (i: number) =>
     `fadeIn ${duration}ms ${delay * i}ms backwards`
 
   const renderProjectsGrid = Object.entries(projects).map(([key, value], i) => {
-    console.log(key)
     return (
       <Link className={`project ${value.size}`} to={`${key}`} key={key}>
         <div
@@ -54,7 +52,12 @@ export const Work = ({ projects }: { projects: Projects }) => {
           </h1>
           <h2> A look into the work I've done</h2>
         </div>
-        <div className="work-grid">{renderProjectsGrid}</div>
+        <div
+          className="work-grid"
+          style={{ animation: `fadeIn 1.5s 1s backwards` }}
+        >
+          {renderProjectsGrid}
+        </div>
         <Outlet />
       </div>
     </>
