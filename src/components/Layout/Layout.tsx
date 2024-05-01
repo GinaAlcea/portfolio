@@ -5,12 +5,12 @@ import { Stack } from '@mui/material'
 
 const Layout = () => {
   return (
-    <Stack className="App" direction={'row'}>
+    <div className="App">
       <Sidebar />
       <div className="page">
         <Outlet />
       </div>
-    </Stack>
+    </div>
   )
 }
 

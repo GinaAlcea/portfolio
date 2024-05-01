@@ -1,8 +1,9 @@
 .about-page {
   position: relative;
-  display: flex;
-  left: 10rem;
+  padding: 1rem 5%;
+  width: 100%;
   align-items: center;
+  // overflow: hidden;
 
   .text-zone {
     display: flex;
@@ -10,11 +11,20 @@
     max-width: 50%;
   }
 
+  @media screen and (max-width: 768px) {
+    /* Set max-width to 100% on mobile devices */
+    .text-zone {
+      max-width: 100%;
+    }
+  }
+
   .sun {
+    position: relative;
     z-index: -2;
     margin: 3rem;
     width: 600px;
     height: 600px;
+    left: 50%;
     border-radius: 50%;
     background: #969696;
     box-shadow: 0 0 30px rgb(174, 174, 174);
@@ -36,11 +46,14 @@
     0% {
       transform: rotate(-60deg);
     }
-    90% {
-      transform: rotate(70deg);
+    80% {
+      transform: rotate(90deg);
     }
-    100%{
-      transform: rotate(270deg);
+    90% {
+      transform: rotate(270deg)
+    }
+    100% {
+      transform: rotate(300deg);
     }
   }
 }

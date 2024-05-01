@@ -14,11 +14,11 @@ import { Stack } from '@mui/material'
 
 const Sidebar = () => {
   return (
-    <Stack className="nav-bar">
+    <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={Logo} alt="logo" />
       </Link>
-      <Stack className="nav-bar-pages">
+      <div className="nav-bar-pages">
         <NavLink className="home" to="/">
           <FontAwesomeIcon icon={faHome} />
         </NavLink>
@@ -34,8 +34,8 @@ const Sidebar = () => {
         <NavLink className="contact" to="/contact">
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
-      </Stack>
-      <Stack>
+      </div>
+      <div>
         <a
           className="nav-bar-socials"
           target="_blank"
@@ -52,8 +52,8 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faGithub} />
         </a>
-      </Stack>
-    </Stack>
+      </div>
+    </div>
   )
 }
 

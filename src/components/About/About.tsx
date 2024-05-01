@@ -26,21 +26,17 @@ const About = () => {
           balance work with fun, while maintaining a positive but realistic
           view. I take their opinions to heart while trying to create the best
           result possible.
-          {/*
-            I
-            like learning new things, meeting new people and trying things I
-            haven't tried before. I'm very eager to explore new subjects to form
-            new opinions by myself, but I also appreciate people who share their
-            experiences and show me their view on these subjects.
-          </p>
-          <p>
-            A good example of how much I like to learn new things: in 2022 in
-            decided to change careers and went from assistent-manager in an
-            Irish pub to an IT trainee, and I've loved every moment of it so
-            far! */}
         </p>
       </div>
-      <div style={{ overflow: 'hidden' }}>
+      <div
+        style={{
+          position: 'absolute',
+          // left: '50%',
+          height: '100%',
+          overflow: 'hidden',
+          width: '100%',
+        }}
+      >
         <div className="sun">
           <div className="moon"></div>
         </div>

@@ -1,66 +1,83 @@
-import { Stack } from '@mui/material'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './Contact.scss'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
+  const [alertType, setAlertType] = useState<'success' | 'error' | null>(null)
   const contactArray = 'Contact me'.split('')
-  // const refForm = useRef()
+  const refForm = useRef<HTMLFormElement>(null)
 
-  // const sendEmail = (e: any) => {
-  //   console.log(e)
-  //   e.preventDefault()
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
-  //   emailjs
-  //     .sendForm('service_hyyudiu', 'contact_form', refForm.current, {
-  //       publicKey: '1Fn86Hq0gZrsc0rtA',
-  //     })
-  //     .then(
-  //       () => {
-  //         alert('Message has been successfully sent!')
-  //         window.location.reload()
-  //       },
-  //       (error) => {
-  //         alert('Message has not been sent. Please try again')
-  //       }
-  //     )
-  // }
+    if (refForm.current) {
+      emailjs
+        .sendForm('service_form', 'contact_form', refForm.current, {
+          publicKey: '1Fn86Hq0gZrsc0rtA',
+        })
+        .then(
+          () => {
+            setAlertType('success')
+            setTimeout(() => setAlertType(null), 5000)
+            refForm.current && refForm.current.reset()
+          },
+          (error) => {
+            setAlertType('error')
+            setTimeout(() => setAlertType(null), 5000)
+          }
+        )
+    }
+  }
 
   return (
     <>
       <div className="container contact-page">
+        {alertType === 'success' ? (
+          <div className="alert-popup success">
+            <FontAwesomeIcon icon={faCheck} style={{ margin: '0.5rem' }} />
+            Message has been successfully sent!
+          </div>
+        ) : alertType === 'error' ? (
+          <div className="alert-popup error">
+            <FontAwesomeIcon icon={faXmark} style={{ margin: '0.5rem' }} />
+            Message has not been sent. Please try again.
+          </div>
+        ) : (
+          ''
+        )}
         <div className="text-zone">
           <h1>
             <AnimatedLetters strArray={contactArray} index={1} />
           </h1>
           <h2>questions / offers </h2>
-          <form
-          // ref={refForm} onSubmit={sendEmail}
-          >
-            <Stack className="contact-form" direction={'column'}>
-              <Stack className="contact-form-info" direction={'row'}>
+          <div className="contact-form">
+            <form ref={refForm} onSubmit={sendEmail}>
+              <div className="contact-form-info">
                 <input type="text" name="name" placeholder="Name" required />
                 <input
                   type="email"
                   name="email"
                   placeholder="E-mail"
                   required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
-              </Stack>
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                required
-              />
-              <textarea name="message" placeholder="Message" required />
-            </Stack>
-            <button className="button" type="submit">
-              SEND
-            </button>
-          </form>
+              </div>
+              <div className="contact-form-message">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea name="message" placeholder="Message" required />
+              </div>
+              <button className="button" type="submit">
+                SEND
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </>
