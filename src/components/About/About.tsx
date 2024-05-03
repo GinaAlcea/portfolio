@@ -28,18 +28,8 @@ const About = () => {
           result possible.
         </p>
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          // left: '50%',
-          height: '100%',
-          overflow: 'hidden',
-          width: '100%',
-        }}
-      >
-        <div className="sun">
-          <div className="moon"></div>
-        </div>
+      <div className="sun">
+        <div className="moon"></div>
       </div>
     </div>
   )

@@ -28,33 +28,30 @@
 
   .ring {
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     border: 1px solid  rgb(118, 118, 118);
     border-radius: 50%;
     height: 85%;
     width: 70%;
-    justify-content: center;
     animation: fadeIn 1.5s 1.5s backwards;
     box-shadow: 0 0 10px rgba(174, 174, 174, 0.5);
   }
 
   .ring2 {
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     border: 1px solid  rgb(118, 118, 118);
     border-radius: 50%;
     height: 85%;
     width: 80%;
-    justify-content: center;
     transform: rotate(20deg);
     animation: fadeIn 1.5s  1.5s backwards;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* change skills layout on mobile devices */
   .skills-page {
     display: flex;
     flex-direction: column;

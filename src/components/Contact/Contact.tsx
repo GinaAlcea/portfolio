@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = () => {
   const [alertType, setAlertType] = useState<'success' | 'error' | null>(null)
@@ -73,9 +74,33 @@ const Contact = () => {
                 />
                 <textarea name="message" placeholder="Message" required />
               </div>
-              <button className="button" type="submit">
-                SEND
-              </button>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <button className="button" type="submit">
+                  SEND
+                </button>
+                <div className="mobile-socials">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.linkedin.com/in/ginaisaia/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/GinaAlcea"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
             </form>
           </div>
         </div>

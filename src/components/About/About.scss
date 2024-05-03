@@ -3,7 +3,6 @@
   padding: 1rem 5%;
   width: 100%;
   align-items: center;
-  // overflow: hidden;
 
   .text-zone {
     display: flex;
@@ -11,15 +10,8 @@
     max-width: 50%;
   }
 
-  @media screen and (max-width: 768px) {
-    /* Set max-width to 100% on mobile devices */
-    .text-zone {
-      max-width: 100%;
-      }
-    }
-
   .sun {
-    position: relative;
+    position: fixed;
     z-index: -2;
     margin: 3rem;
     width: 600px;
@@ -54,6 +46,16 @@
     }
     100% {
       transform: rotate(300deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-page {
+    width: 100%;
+
+    .text-zone {
+      max-width: 100%;
     }
   }
 }

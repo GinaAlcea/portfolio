@@ -61,8 +61,12 @@
         &:focus {
           outline: 1px solid white;
         }
+      }
     }
-  }
+
+    .mobile-socials {
+      opacity: 0
+    }
 
   .alert-popup {
     display: flex;
@@ -94,5 +98,31 @@
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #4d4d4e inset !important;
     -webkit-text-fill-color: #FFF !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-page {
+    .contact-form form {
+      width: 100%;
+    }
+
+    button {
+      margin-top: 0;
+    }
+
+    .mobile-socials {
+      opacity: 1;
+      display: flex;
+      align-items: flex-end;
+
+      a {
+        svg {
+          height: 30px;
+          width: 30px;
+          margin: 2rem 0.5rem;
+        }
+      }
+    }
   }
 }

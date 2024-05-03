@@ -59,7 +59,7 @@ const Egeria = () => {
     <>
       <div className="container project-page">
         <BackButton />
-        <div style={{ display: 'flex' }}>
+        <div className="header-content">
           <div className="text-zone">
             <div
               style={{

@@ -3,6 +3,11 @@
   padding: 1rem 5%;
   margin-top: 5%;
 
+  .header-content {
+    display: flex;
+    flex-direction: row;
+  }
+
   .text-zone {
     width: 50%;
     display: flex;
@@ -43,4 +48,20 @@
   //     // top: 50%;
   //     color: yellow;
   //   }
+}
+
+@media screen and (max-width: 1024px) {
+  .project-page {
+    .header-content {
+      flex-direction: column;
+    }
+
+    .text-zone {
+      width: 100%;
+    }
+
+    .project-main {
+      width: 100%;
+    }
+  }
 }

@@ -32,10 +32,12 @@ const Skills = () => {
     }
   }, [])
 
-  const delay = 100
-  const duration = 1500
-  const listAnimation = (i: number) =>
-    `fadeIn ${duration}ms ${delay * i}ms backwards`
+  const listAnimation = (i: number) => {
+    const initialDelay = 1500
+    const delay = 100
+    const duration = 1500
+    return `fadeIn ${duration}ms ${initialDelay + delay * i}ms backwards`
+  }
 
   const renderSkills = Object.values(SKILLS).map((skill, i) => {
     const offsetIncrements = 360 / Object.keys(SKILLS).length

@@ -56,6 +56,10 @@ export const ImageSlider = ({ img, oldImg }: Props) => {
     window.onmouseup = null
   }
 
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    slider(event.touches.item(0).clientX)
+  }
+
   return (
     <div className="project-img noselect" ref={imageContainer}>
       <img className="project-old-img" src={oldImg.src} alt={oldImg.alt} />
@@ -73,7 +77,11 @@ export const ImageSlider = ({ img, oldImg }: Props) => {
       >
         <div className="reveal-handler-relative">
           <div className="divider"></div>
-          <div className="handle" onMouseDown={handleMouseDown}>
+          <div
+            className="handle"
+            onMouseDown={handleMouseDown}
+            onTouchMove={handleTouchMove}
+          >
             <FontAwesomeIcon icon={faAngleLeft} />
             <FontAwesomeIcon icon={faAngleRight} />
             <div className="sonar-wave"></div>

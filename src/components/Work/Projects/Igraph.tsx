@@ -69,11 +69,7 @@ const Igraph = () => {
     <>
       <div className="container project-page">
         <BackButton />
-        <div
-          style={{
-            display: 'flex',
-          }}
-        >
+        <div className="header-content">
           <div className="text-zone">
             <h1>
               <AnimatedLetters strArray={projectArray} index={1} />

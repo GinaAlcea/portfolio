@@ -96,3 +96,16 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .work-page {
+    justify-content: flex-start;
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-flow: row;
+      grid-gap: 1rem;
+    }
+  }
+}
