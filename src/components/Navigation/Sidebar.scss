@@ -42,6 +42,18 @@
       position: relative;
       text-decoration: none;
 
+      &:hover {
+        color: #fff;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
       &:after {
         content: '';
         font-size: 9px;
@@ -117,7 +129,9 @@
     height: 5rem;
 
     .logo {
-      margin-left: 0.5rem;
+      display: flex;
+      width: 51px;
+      padding: 0;
       pointer-events: none;
     }
 
@@ -135,20 +149,32 @@
         height: auto;
         width: 51px;
 
+        &:hover {
+          color: #fff;
+
+          svg {
+            opacity: 1;
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+
         &:after {
           opacity: 1;
           font-size: 7px;
           text-align: center;
         }
-
-        &:hover {
-          color: #fff;
-
-        svg {
-          opacity: 1;
-        }
       }
+
+      a.active {
+        color: #fff;
       }
+    }
+
+    .nav-bar-socials {
+      display: none;
     }
   }
 }
