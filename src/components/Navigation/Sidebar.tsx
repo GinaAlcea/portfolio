@@ -35,7 +35,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
       </div>
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'inherit' }}>
         <a
           className="nav-bar-socials"
           target="_blank"

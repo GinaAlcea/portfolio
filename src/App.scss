@@ -13,27 +13,18 @@ input, textarea {
   scrollbar-color: #4d4d4e #181818;
 }
 
+@media screen and (max-width: 768px) {
+  /* Put sidebar on the bottom for mobile devices*/
+  .App {
+    flex-direction: column-reverse;
+  }
+}
+
   h1 {
     color: #fff;
     font-size: 53px;
     font-weight: 700;
     margin: 0;
-
-    // &::before {
-    //   content: '" ';
-    //   font-family: cursive;
-    //   color: black;
-    //   font-size: 53px;
-    //   animation: fadeIn 1.5s 1s backwards;
-    // }
-
-    // &::after {
-    //   content: ' "';
-    //   font-family: cursive;
-    //   color: black;
-    //   font-size: 53px;
-    //   animation: fadeIn 1.5s 1s backwards;
-    // }
   }
 
   h2 {
