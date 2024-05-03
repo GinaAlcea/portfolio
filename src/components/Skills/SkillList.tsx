@@ -82,7 +82,6 @@ export const SKILLS = {
     type: 'Hands-on professional experience',
     experience: '2 years',
   },
-
   azure: {
     name: 'Azure',
     icon: faMicrosoft,

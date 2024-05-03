@@ -3,6 +3,7 @@ import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import SkillGroup from './SkillGroup/SkillGroup'
 import { SKILLS } from './SkillList'
 import './Skills.scss'
+import { useEffect, useState } from 'react'
 
 interface ISkills {
   [index: number]: Skill[]
@@ -16,7 +17,20 @@ interface Skill {
 }
 
 const Skills = () => {
+  const [isMobile, setIsMobile] = useState(false)
   const skillsArray = 'My skills'.split('')
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   const delay = 100
   const duration = 1500
@@ -33,7 +47,9 @@ const Skills = () => {
         key={i}
         style={{
           animation: listAnimation(i),
-          transform: `rotate(${angleIncrements}deg) translate(500px, 50px) rotate(-${angleIncrements}deg)`,
+          transform: isMobile
+            ? 'none'
+            : `rotate(${angleIncrements}deg) translate(500px, 50px) rotate(-${angleIncrements}deg)`,
         }}
       >
         <SkillGroup value={skill} />
@@ -45,7 +61,6 @@ const Skills = () => {
     <div className="container skills-page">
       <div className="ring"></div>
       <div className="ring2"></div>
-      <div className="skill-container">{renderSkills}</div>
       <div className="text-zone">
         <h1>
           <AnimatedLetters strArray={skillsArray} index={1} />
@@ -74,6 +89,7 @@ const Skills = () => {
           Mantine.
         </p>
       </div>
+      <div className="skill-container">{renderSkills}</div>
     </div>
   )
 }

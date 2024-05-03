@@ -64,3 +64,17 @@
     width: max-content;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  /* Set max-width to 100% on mobile devices */
+  .skill-group {
+    display: flex;
+    position: relative;
+    transform: none;
+
+    .hover-experience {
+      width: auto;
+      opacity: 1;
+    }
+  }
+}
