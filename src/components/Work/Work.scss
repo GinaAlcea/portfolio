@@ -105,7 +105,7 @@
       display: grid;
       grid-template-columns: 100%;
       grid-auto-flow: row;
-      grid-gap: 1rem;
+      grid-gap: 1rem 0;
     }
   }
 }

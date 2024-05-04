@@ -85,9 +85,9 @@ const Igraph = () => {
           <video
             className="project-main"
             src={homepageVid}
-            autoPlay
             muted
             loop
+            controls
           />
         </div>
         <div className="project-img-group">{renderNewImages}</div>

@@ -9,8 +9,27 @@ import Skills from './components/Skills/Skills'
 import Egeria from './components/Work/Projects/Egeria'
 import Igraph from './components/Work/Projects/Igraph'
 import { PROJECTS } from './components/Work/Projects/Projects'
+import { useEffect } from 'react'
 
 function App() {
+  useEffect(() => {
+    const adjustPadding = () => {
+      const browserUIHeight =
+        window.innerHeight - document.documentElement.clientHeight
+      const appElement = document.querySelector<HTMLElement>('.App')
+      if (appElement) {
+        appElement.style.paddingTop = browserUIHeight + 'px'
+      }
+    }
+
+    adjustPadding()
+    window.addEventListener('resize', adjustPadding)
+
+    return () => {
+      window.removeEventListener('resize', adjustPadding)
+    }
+  }, [])
+
   return (
     <div className="App">
       <Routes>
