@@ -1,6 +1,17 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+$black: #181818;
+$darkestgrey: #202020;
+$darkgrey: #333;
+$grey: #4d4d4e;
+$mediumgrey: #8d8d8d;
+$lightgrey: #aeaeae;
+$lightestgrey: #d4d4d4;
+$white: #fff;
+
+$green: #1fb21f80;
+$red: #ff000080;
 
 input,
 textarea {
@@ -11,7 +22,7 @@ textarea {
   display: flex;
   width: 100vw;
   height: 100vh;
-  scrollbar-color: #4d4d4e #181818;
+  scrollbar-color: $grey $black;
 }
 
 @media screen and (max-width: 768px) {
@@ -22,14 +33,14 @@ textarea {
 }
 
 h1 {
-  color: #fff;
+  color: $white;
   font-size: 53px;
   font-weight: 700;
   margin: 0;
 }
 
 h2 {
-  color: #8d8d8d;
+  color: $mediumgrey;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 3px;
@@ -39,7 +50,7 @@ h2 {
 }
 
 p {
-  color: #d4d4d4;
+  color: $lightestgrey;
   font-size: 14px;
   line-height: 18px;
   margin: 0.5rem 0;
@@ -69,23 +80,21 @@ img {
 
 .button {
   display: flex;
-  color: #ffffff;
+  color: $white;
   background: none;
   font-weight: 500;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 10px 18px;
-  border: 1px solid rgb(174, 174, 174);
+  border: 1px solid $lightgrey;
   opacity: 0.8;
   margin-top: 25px;
-  background: #181818;
+  background: $black;
 
   &:hover {
-    background: #8d8d8d;
-    color: #333;
+    background: $mediumgrey;
+    color: $darkgrey;
     transition: ease-out 0.2s;
-    box-shadow: 0 0 30px rgb(174, 174, 174);
+    box-shadow: 0 0 30px $lightgrey;
   }
 }
-
-$primary-color: #2b2b2b;

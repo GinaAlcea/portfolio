@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .contact-page {
   position: relative;
   width: 100%;
@@ -37,21 +39,21 @@
     }
 
     input:not([type='button']) {
-      background: #4d4d4e;
-      color: #fff;
+      background: $grey;
+      color: $white;
       padding: 1rem;
       margin: 0 1rem 1rem 0;
       border: none;
       outline: none;
 
       &:focus {
-        outline: 1px solid white;
+        outline: 1px solid $white;
       }
     }
 
     textarea {
-      background: #4d4d4e;
-      color: #fff;
+      background: $grey;
+      color: $white;
       padding: 1rem;
       margin-right: 1rem;
       min-height: 100px;
@@ -59,7 +61,7 @@
       resize: vertical;
 
       &:focus {
-        outline: 1px solid white;
+        outline: 1px solid $white;
       }
     }
   }
@@ -76,27 +78,27 @@
     width: fit-content;
     align-items: center;
     font-size: 12px;
-    color: #fff;
+    color: $white;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
-    background-color: #181818;
+    background-color: $black;
     border-radius: 0.5rem;
     animation: fadeIn 0.2s backwards;
   }
 
   .success {
-    box-shadow: 0 0 1rem rgb(31, 178, 31, 0.5);
+    box-shadow: 0 0 1rem $green;
   }
 
   .error {
-    box-shadow: 0 0 1rem rgb(255, 0, 0, 0.5);
+    box-shadow: 0 0 1rem $red;
   }
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #4d4d4e inset !important;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0 30px $grey inset !important;
+    -webkit-text-fill-color: $white !important;
   }
 }
 
@@ -109,9 +111,9 @@
   .shooting-star {
     position: absolute;
     opacity: 0;
-    background: #fff;
+    background: $white;
     border-radius: 50%;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 2px $mediumgrey;
     animation: animate 1s linear infinite;
 
     &::before {
@@ -121,7 +123,7 @@
       transform: translateY(-50%);
       width: 300px;
       height: 1px;
-      background: linear-gradient(90deg, #fff, transparent);
+      background: linear-gradient(90deg, $white, transparent);
     }
   }
 

@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .work-page {
   position: relative;
   flex-direction: column;
@@ -26,7 +28,7 @@
 
   .project {
     display: flex;
-    color: #333;
+    color: $darkgrey;
     justify-content: center;
     align-items: center;
     font-size: 18px;
@@ -62,7 +64,7 @@
 
       &:hover {
         transition: ease-out 0.2s;
-        box-shadow: 0 0 30px rgb(174, 174, 174);
+        box-shadow: 0 0 30px $lightgrey;
 
         img {
           opacity: 1;
@@ -76,22 +78,22 @@
       }
 
       .hover-name {
-          letter-spacing: 1px;
-          opacity: 1;
-          align-self: center;
-          justify-content: center;
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
+        letter-spacing: 1px;
+        opacity: 1;
+        align-self: center;
+        justify-content: center;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
 
-          h1 {
-            font-size: 24px;
-          }
+        h1 {
+          font-size: 24px;
+        }
 
-          h2 {
-            color: rgb(160, 160, 160);
-          }
+        h2 {
+          color: $lightgrey;
+        }
       }
     }
   }

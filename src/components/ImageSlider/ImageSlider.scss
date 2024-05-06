@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .project-new-img {
   width: 100%;
 }
@@ -21,24 +23,24 @@
       position: absolute;
       width: 2px;
       height: 100%;
-      background: #202020;
+      background: $darkestgrey;
       margin-left: -1px;
-      box-shadow: 0 0 1px #202020;
+      box-shadow: 0 0 1px $darkestgrey;
     }
 
     .handle {
-      background: #202020;
+      background: $darkestgrey;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
+      color: $white;
       border-radius: 50%;
       width: 3rem;
       height: 3rem;
       margin-left: -1.5rem;
       position: absolute;
       top: calc(50% - 1.5rem);
-      box-shadow: 0 0 2px #202020;
+      box-shadow: 0 0 2px $darkestgrey;
       touch-action: none;
     }
 
@@ -48,7 +50,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #202020;
+      background-color: $darkestgrey;
       border-radius: 50%;
       animation: sonarWave 2s linear infinite;
     }
