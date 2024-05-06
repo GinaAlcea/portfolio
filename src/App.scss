@@ -1,7 +1,9 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-input, textarea {
+
+input,
+textarea {
   font-family: 'Montserrat';
 }
 
@@ -67,13 +69,13 @@ img {
 
 .button {
   display: flex;
-  color:#ffffff;
+  color: #ffffff;
   background: none;
   font-weight: 500;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 10px 18px;
-  border: 1px solid  rgb(174, 174, 174);
+  border: 1px solid rgb(174, 174, 174);
   opacity: 0.8;
   margin-top: 25px;
   background: #181818;

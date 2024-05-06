@@ -28,7 +28,7 @@
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background:#202020;
+    background: #202020;
     animation: eclipse 120s infinite linear;
     transform-origin: 50% 150%;
     box-shadow: inset 0 0 50px rgba(69, 68, 68, 0.2);
@@ -42,7 +42,7 @@
       transform: rotate(90deg);
     }
     90% {
-      transform: rotate(270deg)
+      transform: rotate(270deg);
     }
     100% {
       transform: rotate(300deg);
@@ -52,7 +52,10 @@
 
 @media screen and (max-width: 1024px) {
   .about-page {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    justify-content: center;
 
     .text-zone {
       max-width: 100%;

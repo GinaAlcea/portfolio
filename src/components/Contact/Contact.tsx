@@ -1,10 +1,11 @@
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import './Contact.scss'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { generateShootingStars } from './ContactBackground'
 
 const Contact = () => {
   const [alertType, setAlertType] = useState<'success' | 'error' | null>(null)
@@ -33,8 +34,13 @@ const Contact = () => {
     }
   }
 
+  useEffect(() => {
+    generateShootingStars('contact-background', 2)
+  }, [])
+
   return (
     <>
+      <div id="contact-background"></div>
       <div className="container contact-page">
         {alertType === 'success' ? (
           <div className="alert-popup success">

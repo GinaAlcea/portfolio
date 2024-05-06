@@ -10,7 +10,7 @@ const About = () => {
         <h1>
           <AnimatedLetters strArray={aboutArray} index={1} />
         </h1>
-        <h2>creative / enthusiastic / adaptive</h2>
+        <h2>creative / adaptive / enthusiastic</h2>
         <p>
           I would describe myself as someone who tries to find balance in
           everything she does. I like to create pretty things that look nice -
