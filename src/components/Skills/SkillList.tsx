@@ -57,6 +57,7 @@ export const SKILLS = {
     icon: logoSCRUM,
     type: 'Hands-on professional experience',
     experience: '2+ years ',
+    certificate: true,
   },
   react: {
     name: 'ReactJS',
@@ -87,12 +88,14 @@ export const SKILLS = {
     icon: faMicrosoft,
     type: 'Hands-on professional experience',
     experience: '2 years ',
+    certificate: true,
   },
   sql: {
     name: 'MySQL',
     icon: logoSQL,
     type: 'Theoretical knowledge',
     experience: '< 1 year',
+    certificate: true,
   },
   ts: {
     name: 'TypeScript',

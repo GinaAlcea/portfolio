@@ -8,6 +8,7 @@
   transform: scaleY(calc(1 / 0.6));
 
   .skill-circle {
+    position: relative;
     display: flex;
     border: 1px solid $lightgrey;
     border-radius: 50%;
@@ -16,6 +17,12 @@
     max-width: 96px;
     justify-content: center;
     background: $black;
+
+    .certificate-icon {
+      position: absolute;
+      left: 75%;
+      color: $white;
+    }
 
     &:hover {
       background: $lightgrey;

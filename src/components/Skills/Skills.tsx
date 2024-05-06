@@ -5,17 +5,6 @@ import { SKILLS } from './SkillList'
 import './Skills.scss'
 import { useEffect, useState } from 'react'
 
-interface ISkills {
-  [index: number]: Skill[]
-}
-
-interface Skill {
-  name: string
-  icon: string | IconDefinition
-  type: string
-  experience: string
-}
-
 const Skills = () => {
   const [isMobile, setIsMobile] = useState(false)
   const skillsArray = 'My skills'.split('')
@@ -54,7 +43,7 @@ const Skills = () => {
             : `rotate(${angleIncrements}deg) translate(500px, 50px) rotate(-${angleIncrements}deg)`,
         }}
       >
-        <SkillGroup value={skill} />
+        <SkillGroup skill={skill} />
       </div>
     )
   })

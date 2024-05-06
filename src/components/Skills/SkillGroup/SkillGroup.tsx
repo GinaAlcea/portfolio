@@ -1,36 +1,44 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './SkillGroup.scss'
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition, faStar } from '@fortawesome/free-solid-svg-icons'
 
 interface Skill {
   name: string
   icon: string | IconDefinition
   type: string
   experience: string
+  certificate?: boolean
 }
 
-const SkillGroup = ({ value }: { value: Skill }) => {
+const SkillGroup = ({ skill }: { skill: Skill }) => {
   const logo =
-    typeof value.icon === 'object' ? (
+    typeof skill.icon === 'object' ? (
       <FontAwesomeIcon
         className="brand-icon"
-        icon={value.icon}
-        title={value.name}
+        icon={skill.icon}
+        title={skill.name}
       />
     ) : (
-      <img className="brand-icon" src={value.icon} alt={value.name} />
+      <img className="brand-icon" src={skill.icon} alt={skill.name} />
     )
 
   return (
     <div className="skill-group">
       <div className="skill-circle">
-        <div className="hover-name">{value.name}</div>
+        {skill.certificate && (
+          <FontAwesomeIcon
+            icon={faStar}
+            size="2xl"
+            className="certificate-icon"
+          />
+        )}
+        <div className="hover-name">{skill.name}</div>
         {logo}
       </div>
       <div className="hover-experience">
-        {value.experience}
+        {skill.experience}
         <br />
-        {value.type}
+        {skill.type}
       </div>
     </div>
   )
