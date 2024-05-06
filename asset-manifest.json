@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ce986771.css",
-    "main.js": "/portfolio/static/js/main.39150527.js",
+    "main.js": "/portfolio/static/js/main.731b74e5.js",
     "static/js/1927.c316a944.chunk.js": "/portfolio/static/js/1927.c316a944.chunk.js",
     "static/js/7590.99fa2421.chunk.js": "/portfolio/static/js/7590.99fa2421.chunk.js",
     "static/js/6725.652bd60c.chunk.js": "/portfolio/static/js/6725.652bd60c.chunk.js",
@@ -72,16 +72,16 @@
     "static/js/4494.796ff03f.chunk.js": "/portfolio/static/js/4494.796ff03f.chunk.js",
     "static/js/4290.136d0558.chunk.js": "/portfolio/static/js/4290.136d0558.chunk.js",
     "static/media/homepage-vid.mov": "/portfolio/static/media/homepage-vid.7be374b74c3d3862211b.mov",
-    "static/media/igraphCover.svg": "/portfolio/static/media/igraphCover.75d26abf9ba3e70fdd239197fee24b97.svg",
-    "static/media/EgeriaCover.svg": "/portfolio/static/media/EgeriaCover.7d4f76d52358ebd4b7039a2d889f7f8a.svg",
     "static/media/graph.png": "/portfolio/static/media/graph.f96c1e7b4a973eb3e935.png",
     "static/media/old-stats.png": "/portfolio/static/media/old-stats.48006d146c0dba03d1a5.png",
     "static/media/stats-bars.png": "/portfolio/static/media/stats-bars.1619ccdb87c26997ff7d.png",
     "static/media/cards.png": "/portfolio/static/media/cards.1c2cac9fa619a47e7937.png",
+    "static/media/igraphCover.png": "/portfolio/static/media/igraphCover.24ec64be11c42fe0c44e.png",
     "static/media/empty-charts.png": "/portfolio/static/media/empty-charts.c3604c4fea8c4c8ddc1b.png",
     "static/media/old-graph.png": "/portfolio/static/media/old-graph.02b818a3cfc6d66212b2.png",
+    "static/media/EgeriaCover.png": "/portfolio/static/media/EgeriaCover.51e49dd62258da0e6dcf.png",
     "static/media/old-empty-charts.png": "/portfolio/static/media/old-empty-charts.7390783e5a11f9980205.png",
-    "static/media/GinaIsaiaCV.pdf": "/portfolio/static/media/GinaIsaiaCV.d6b476cf9df473e9606f.pdf",
+    "static/media/GinaIsaiaCV.pdf": "/portfolio/static/media/GinaIsaiaCV.c82a87c4dc7552dfedd9.pdf",
     "static/media/home-menu.png": "/portfolio/static/media/home-menu.a7d3c5e1c3cdda596bde.png",
     "static/media/lineage-graph.png": "/portfolio/static/media/lineage-graph.e7fab94970914db30461.png",
     "static/media/detail-page.png": "/portfolio/static/media/detail-page.fb98668b0049685f05b2.png",
@@ -96,7 +96,7 @@
     "static/media/logoSCRUM.svg": "/portfolio/static/media/logoSCRUM.83b0fe2c6e473d6170be103a04fa084b.svg",
     "index.html": "/portfolio/index.html",
     "main.ce986771.css.map": "/portfolio/static/css/main.ce986771.css.map",
-    "main.39150527.js.map": "/portfolio/static/js/main.39150527.js.map",
+    "main.731b74e5.js.map": "/portfolio/static/js/main.731b74e5.js.map",
     "1927.c316a944.chunk.js.map": "/portfolio/static/js/1927.c316a944.chunk.js.map",
     "7590.99fa2421.chunk.js.map": "/portfolio/static/js/7590.99fa2421.chunk.js.map",
     "6725.652bd60c.chunk.js.map": "/portfolio/static/js/6725.652bd60c.chunk.js.map",
@@ -169,6 +169,6 @@
   },
   "entrypoints": [
     "static/css/main.ce986771.css",
-    "static/js/main.39150527.js"
+    "static/js/main.731b74e5.js"
   ]
 }
