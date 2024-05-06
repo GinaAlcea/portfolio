@@ -1,5 +1,5 @@
-import igraph from '../../../asset/igraphCover.svg'
-import egeria from '../../../asset/EgeriaCover.svg'
+import igraph from '../../../asset/igraphCover.png'
+import egeria from '../../../asset/EgeriaCover.png'
 
 export const PROJECTS = {
   igraph: {
