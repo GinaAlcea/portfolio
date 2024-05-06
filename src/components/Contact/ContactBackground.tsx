@@ -1,5 +1,5 @@
 const randomInteger = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1) + min)
+  return Math.ceil(Math.random() * (max - min + 1) + min)
 }
 
 const randomDecimal = (min: number, max: number) => {
@@ -22,13 +22,13 @@ const createShootingStars = (starsContainer: string) => {
     const div = document.createElement('div')
     div.className = 'shooting-star'
 
-    div.style.top = `${randomInteger(0, 100)}%`
-    div.style.left = `${randomInteger(0, 100)}%`
+    div.style.top = `${randomInteger(0, 75)}%`
+    div.style.left = `${randomInteger(50, 100)}%`
 
     div.style.height = `${randomInteger(0, 4)}px`
     div.style.width = div.style.height
 
-    div.style.animationDelay = `${randomDecimal(0, 8)}s`
+    div.style.animationDelay = `${randomDecimal(0, 3.5)}s`
     div.style.animationDuration = `${randomDecimal(1.5, 3)}s`
 
     container.appendChild(div)

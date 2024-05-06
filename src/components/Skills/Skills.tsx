@@ -81,7 +81,7 @@ const Skills = () => {
           managing it. In this time I've earned certificates for some
           fundamental subjects in the IT field: MySQL Fundamentals, Professional
           Scrum Master I, Professional Scrum Master II and Azure Fundamentals
-          900.
+          900. I have also earned Azure's AI Fundamentals (AI-900) certificate.
         </p>
         <p>
           While working in the field for almost 2 years I've experienced what
