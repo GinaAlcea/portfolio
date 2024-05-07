@@ -21,6 +21,30 @@
     animation: fadeIn 1.5s 1s backwards;
   }
 
+  .project-link {
+    display: flex;
+    margin-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid $white;
+    border-radius: 50%;
+    color: $lightgrey;
+
+    img {
+      padding: 3px;
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg)
+        brightness(189%) contrast(101%);
+    }
+
+    &:hover {
+      background: $mediumgrey;
+      transition: ease-out 0.2s;
+      box-shadow: 0 0 30px $lightgrey;
+    }
+  }
+
   i {
     font-size: 14px;
     color: $mediumgrey;

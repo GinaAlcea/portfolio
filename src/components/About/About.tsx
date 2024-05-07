@@ -12,8 +12,7 @@ const About = () => {
         </h1>
         <h2>creative / adaptive / enthusiastic</h2>
         <p>
-          I would describe myself as someone who tries to find balance in
-          everything she does. I like to create pretty things that look nice -
+          I always try to find balance in everything I do. I like to create good looking things -
           but they need to serve a purpose too. I like to go out and explore the
           world - but I also find so much peace in the places and people I know.
           For me, as long as everything is in balance I feel perfectly in place.

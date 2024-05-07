@@ -70,24 +70,24 @@ const Egeria = () => {
               <h1>
                 <AnimatedLetters strArray={projectArray} index={1} />
               </h1>
-              <a href={PROJECTS.egeria.link} target="_blank" rel="noreferrer">
+              <a
+                className="project-link"
+                href={PROJECTS.egeria.link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   src={EgeriaLogo}
                   alt="egeria project"
-                  style={{
-                    height: '30px',
-                    paddingLeft: '0.5rem',
-                    filter:
-                      'invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(189%) contrast(101%)',
-                  }}
                 />
               </a>
-              <a href={PROJECTS.egeria.gh} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  size="2xl"
-                  style={{ paddingLeft: '1rem', color: '#8d8d8d' }}
-                />
+              <a
+                className="project-link"
+                href={PROJECTS.egeria.gh}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2xl" />
               </a>
             </div>
             <h2>{PROJECTS.egeria.subtitle}</h2>

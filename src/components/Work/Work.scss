@@ -103,6 +103,11 @@
   .work-page {
     justify-content: flex-start;
 
+    .text-zone {
+      align-items: center;
+      text-align: center;
+    }
+
     .work-grid {
       display: grid;
       grid-template-columns: 100%;

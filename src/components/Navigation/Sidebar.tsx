@@ -10,7 +10,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../../asset/Logo.svg'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { Stack } from '@mui/material'
 
 const Sidebar = () => {
   return (

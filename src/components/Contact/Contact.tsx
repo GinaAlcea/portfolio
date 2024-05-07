@@ -96,14 +96,14 @@ const Contact = () => {
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/ginaisaia/"
                   >
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon icon={faLinkedin} size="2xl" />
                   </a>
                   <a
                     target="_blank"
                     rel="noreferrer"
                     href="https://github.com/GinaAlcea"
                   >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon icon={faGithub} size="2xl" />
                   </a>
                 </div>
               </div>
