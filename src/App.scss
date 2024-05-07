@@ -27,9 +27,13 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .App {
-    // display: block;
-    flex-direction: column-reverse;
-    position: relative;
+    // flex-direction: column-reverse;
+    display: block;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
   }
 }
 
