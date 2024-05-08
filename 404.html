@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
-    <link rel="stylesheet" href="App.scss">
     <script>
       // Redirect to index.html for SPA fallback
       window.location.replace("index.html");
     </script>
+    <style>
+
+.notfound-page {
+  position: relative;
+  width: 100%;
+  padding: 1rem 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+  .text-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    animation: fadeIn 1.5s 1s backwards;
+  }
+
+  .black-hole {
+    z-index: -1;
+    position: absolute;
+    margin: 3rem;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #181818;
+    box-shadow:
+      0 0 50px 10px #d4d4d4,
+      inset 0 0 10px 10px #4d4d4e;
+    animation: fadeIn 1.5s 1s backwards;
+  }
+    </style>
 </head>
 <body>
     <div class="container notfound-page">
         <div class="text-zone">
-            <h1>Oops</h1>
+            <h1>404 - Oops</h1>
             <h2>looks like something went wrong</h2>
             <a href="/" class="button">Go back</a>
         </div>
