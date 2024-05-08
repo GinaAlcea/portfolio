@@ -10,7 +10,6 @@ import Egeria from './components/Work/Projects/Egeria'
 import Igraph from './components/Work/Projects/Igraph'
 import { PROJECTS } from './components/Work/Projects/Projects'
 import { useEffect } from 'react'
-import NotFound from './components/NotFound/NotFound'
 
 function App() {
   useEffect(() => {
@@ -42,7 +41,6 @@ function App() {
           <Route path="work/igraph" element={<Igraph />} />
           <Route path="work/egeria" element={<Egeria />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

@@ -98,3 +98,34 @@ img {
     box-shadow: 0 0 30px $lightgrey;
   }
 }
+
+.notfound-page {
+  position: relative;
+  width: 100%;
+  padding: 1rem 5%;
+  align-items: center;
+  justify-content: center;
+
+  .text-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    animation: fadeIn 1.5s 1s backwards;
+  }
+
+  .black-hole {
+    z-index: -1;
+    position: absolute;
+    margin: 3rem;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: $black;
+    box-shadow:
+      0 0 50px 10px $lightestgrey,
+      inset 0 0 10px 10px $grey;
+    animation: fadeIn 1.5s 1s backwards;
+  }
+}
